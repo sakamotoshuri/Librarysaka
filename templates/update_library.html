@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <a href="{{url_for('mypage')}}">図書管理システム</a>
+        <a href="{{url_for('list')}}">一覧</a>
+        <a href="{{url_for('register_library')}}">登録</a>
+        <a href="{{url_for('delete_library')}}">削除</a>
+        <a href="{{url_for('update_library')}}">更新</a>
+        <a href="{{url_for('logout')}}">ログアウト</a>
+</body>
+
+    <form action="{{url_for('update_library_exe')}}", method="post">
+        ISBN:<input  type="text" name="isbn"><br>    
+        タイトル:<input type="text" name="title"><br>
+            <input type="submit" value="更新">
+        </div>
+    </form>
+</body>
+</html>
