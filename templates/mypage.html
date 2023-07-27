@@ -5,11 +5,20 @@
   <title>Document</title>
 </head>
 <body>
-          <a href="{{url_for('mypage')}}">図書管理システム</a>
-              <a href="{{url_for('list')}}">一覧</a>
-              <a href="{{url_for('register_library')}}">登録</a>
-              <a href="{{url_for('delete_library')}}">削除</a>
-              <a href="{{url_for('update_library')}}">更新</a>
-              <a href="{{url_for('logout')}}">ログアウト</a>
+         <h1>図書管理システム</h1>
+         <style>
+          body {
+            width: 960px;
+            margin: auto;
+          }
+          .large-text {
+            font-size: 26px;
+          }
+        </style>
+              <a class="large-text" href="{{url_for('list')}}">一覧</a>
+              <a class="large-text" href="{{url_for('register_library')}}">登録</a>
+              <a class="large-text" href="{{url_for('delete_library')}}">削除</a>
+              <a class="large-text" href="{{url_for('update_library')}}">更新</a>
+              <a class="large-text" href="{{url_for('logout')}}">ログアウト</a>
   </body>
 </html>

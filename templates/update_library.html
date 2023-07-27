@@ -5,18 +5,27 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="{{url_for('mypage')}}">図書管理システム</a>
-        <a href="{{url_for('list')}}">一覧</a>
-        <a href="{{url_for('register_library')}}">登録</a>
-        <a href="{{url_for('delete_library')}}">削除</a>
-        <a href="{{url_for('update_library')}}">更新</a>
-        <a href="{{url_for('logout')}}">ログアウト</a>
+    <h2>図書管理システム</h2>
+    <style>
+        body {
+          width: 960px;
+          margin: auto;
+        }
+        .large-text {
+            font-size: 20px;
+          }
+      </style>
+        <a class="large-text" href="{{url_for('list')}}">一覧</a>
+        <a class="large-text" href="{{url_for('register_library')}}">登録</a>
+        <a class="large-text" href="{{url_for('delete_library')}}">削除</a>
+        <a class="large-text" href="{{url_for('update_library')}}">更新</a>
+        <a class="large-text" href="{{url_for('logout')}}">ログアウト</a>
 </body>
 
     <form action="{{url_for('update_library_exe')}}", method="post">
-        ISBN:<input  type="text" name="isbn"><br>    
-        タイトル:<input type="text" name="title"><br>
-            <input type="submit" value="更新">
+        <h3>ISBN:<input  type="text" name="isbn" style="width: 400px; height: 40px;"></h3>    
+        <h3>タイトル:<input type="text" name="title" style="width: 400px; height: 40px;"></h3>
+            <input type="submit" value="更新" style="width: 60px; height: 45px; font-size: 20px;">
         </div>
     </form>
 </body>

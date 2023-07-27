@@ -6,14 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    <h3>ユーザ登録画面</h3>
+    <h1>ユーザ登録画面</h1>
+    <style>
+      body {
+        width: 960px;
+        margin: auto;
+      }
+    </style>
     {% if error != null %}
       <p style="color:red">{{error}}</p>
     {% endif %}
     <form action="{{url_for('register_exe')}}" method="post">
-      ユーザ名:<input type="text" name="username" value="{{user_name}}"><br>
-      パスワード：<input type="password" name="password" value="{{password}}"><br>
-      <button type="submit">登録</button>
+      <h3>ユーザ名:<input type="text" style="width: 400px; height: 40px;" name="username" value="{{user_name}}"></h3>
+      <h3>パスワード：<input type="password" style="width: 400px; height: 40px;" name="password" value="{{password}}"></h3>
+      <button type="submit" style="width: 60px; height: 45px; font-size: 20px;">登録</button>
     </form>
 </body>
 </html>
